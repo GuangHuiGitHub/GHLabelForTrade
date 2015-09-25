@@ -16,27 +16,34 @@
 @interface GHLabelForTrade()
 @property (nonatomic, strong) UILabel *oneLineLabel;
 @property (nonatomic, strong) UILabel *tipsLabel;
+@property (nonatomic, assign) BOOL isContentChar;
 @end
 @implementation GHLabelForTrade
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        UILabel *oneLineLabel = [[UILabel alloc] init];
-        self.oneLineLabel = oneLineLabel;
-        oneLineLabel.numberOfLines = 0;
-        [self addSubview:oneLineLabel];
-        oneLineLabel.userInteractionEnabled = YES;
-        oneLineLabel.textAlignment = NSTextAlignmentLeft;
-        oneLineLabel.textColor = [UIColor blackColor];
+        self.oneLineLabel = [self creatLabel];
+
         
         UILabel *tipsLabel = [[UILabel alloc] init];
         self.tipsLabel = tipsLabel;
         tipsLabel.userInteractionEnabled = YES;
         tipsLabel.textAlignment = NSTextAlignmentCenter;
         tipsLabel.textColor = [UIColor whiteColor];
-        [oneLineLabel addSubview:tipsLabel];
+        [self.oneLineLabel addSubview:tipsLabel];
+         self.isContentChar = NO;
     }
     return self;
+}
+- (UILabel *)creatLabel
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.numberOfLines = 0;
+    [self addSubview:label];
+    label.userInteractionEnabled = YES;
+    label.textAlignment = NSTextAlignmentLeft;
+    label.textColor = [UIColor blackColor];
+    return label;
 }
 - (void)setText:(NSString *)contentText withFont:(NSInteger)fontNum needMaxLines:(NSInteger)maxLine andTipsText:(NSString *)tipsText withTipsTextBgcolor:(UIColor *)TipsTextBgcolor;
 {
@@ -51,6 +58,18 @@
     self.oneLineLabel.frame = CGRectMake(0, 0, textSize.width, textSize.height);
     self.oneLineLabel.text = contentText;
     self.oneLineLabel.font = [UIFont systemFontOfSize:fontNum];
+    
+//    self.tempLabel.frame = CGRectMake(0, 0, textSize.width, textSize.height);
+//    self.tempLabel.text = contentText;
+//    self.tempLabel.font = [UIFont systemFontOfSize:fontNum];
+    
+    // 验证中文
+    NSMutableString *noEnglishChar = [NSMutableString string];
+    for (int i = 0; i<[contentText length]; i++) {
+        //截取字符串中的每一个字符
+        NSString *s = [contentText substringWithRange:NSMakeRange(i, 1)];
+        [self testInclodedEnglishChar:s];
+    }
     
     NSArray *textArray = [self getSeparatedLinesFromLabel:self.oneLineLabel];
     // 最终字符串
@@ -191,6 +210,19 @@
         NSString *lineString = [text substringWithRange:range];
         [linesArray addObject:lineString];
     }
-    return (NSArray *)linesArray;
+    NSMutableArray *lastArrayM = [NSMutableArray arrayWithArray:linesArray];
+    if (self.isContentChar) {
+        [lastArrayM removeLastObject];
+    }
+    return (NSArray *)lastArrayM;
+}
+
+- (void)testInclodedEnglishChar:(NSString *)str
+{
+    NSInteger temp = [str lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+    if(temp == 1)
+    {
+        self.isContentChar = YES;
+    }
 }
 @end
