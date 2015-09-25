@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAB6A4821BB44E44006D305C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A4811BB44E44006D305C /* main.m */; };
+		CAB6A4851BB44E44006D305C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A4841BB44E44006D305C /* AppDelegate.m */; };
+		CAB6A4881BB44E44006D305C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A4871BB44E44006D305C /* ViewController.m */; };
+		CAB6A48B1BB44E44006D305C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB6A4891BB44E44006D305C /* Main.storyboard */; };
+		CAB6A48D1BB44E44006D305C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB6A48C1BB44E44006D305C /* Images.xcassets */; };
+		CAB6A4901BB44E44006D305C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB6A48E1BB44E44006D305C /* LaunchScreen.xib */; };
+		CAB6A49C1BB44E44006D305C /* GHLabelForTradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A49B1BB44E44006D305C /* GHLabelForTradeTests.m */; };
+		CAB6A4A71BB44EA3006D305C /* GHLabelForTrade.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6A4A61BB44EA3006D305C /* GHLabelForTrade.m */; };
+		CAB6A4A91BB44EB3006D305C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB6A4A81BB44EB3006D305C /* CoreText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAB6A4961BB44E44006D305C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB6A4741BB44E44006D305C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB6A47B1BB44E44006D305C;
+			remoteInfo = GHLabelForTrade;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAB6A47C1BB44E44006D305C /* GHLabelForTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHLabelForTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB6A4801BB44E44006D305C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB6A4811BB44E44006D305C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAB6A4831BB44E44006D305C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAB6A4841BB44E44006D305C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAB6A4861BB44E44006D305C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CAB6A4871BB44E44006D305C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CAB6A48A1BB44E44006D305C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAB6A48C1BB44E44006D305C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CAB6A48F1BB44E44006D305C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CAB6A4951BB44E44006D305C /* GHLabelForTradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHLabelForTradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB6A49A1BB44E44006D305C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB6A49B1BB44E44006D305C /* GHLabelForTradeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHLabelForTradeTests.m; sourceTree = "<group>"; };
+		CAB6A4A51BB44EA3006D305C /* GHLabelForTrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHLabelForTrade.h; sourceTree = "<group>"; };
+		CAB6A4A61BB44EA3006D305C /* GHLabelForTrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLabelForTrade.m; sourceTree = "<group>"; };
+		CAB6A4A81BB44EB3006D305C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAB6A4791BB44E44006D305C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB6A4A91BB44EB3006D305C /* CoreText.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB6A4921BB44E44006D305C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAB6A4731BB44E44006D305C = {
+			isa = PBXGroup;
+			children = (
+				CAB6A4A81BB44EB3006D305C /* CoreText.framework */,
+				CAB6A47E1BB44E44006D305C /* GHLabelForTrade */,
+				CAB6A4981BB44E44006D305C /* GHLabelForTradeTests */,
+				CAB6A47D1BB44E44006D305C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAB6A47D1BB44E44006D305C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAB6A47C1BB44E44006D305C /* GHLabelForTrade.app */,
+				CAB6A4951BB44E44006D305C /* GHLabelForTradeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAB6A47E1BB44E44006D305C /* GHLabelForTrade */ = {
+			isa = PBXGroup;
+			children = (
+				CAB6A4A51BB44EA3006D305C /* GHLabelForTrade.h */,
+				CAB6A4A61BB44EA3006D305C /* GHLabelForTrade.m */,
+				CAB6A4831BB44E44006D305C /* AppDelegate.h */,
+				CAB6A4841BB44E44006D305C /* AppDelegate.m */,
+				CAB6A4861BB44E44006D305C /* ViewController.h */,
+				CAB6A4871BB44E44006D305C /* ViewController.m */,
+				CAB6A4891BB44E44006D305C /* Main.storyboard */,
+				CAB6A48C1BB44E44006D305C /* Images.xcassets */,
+				CAB6A48E1BB44E44006D305C /* LaunchScreen.xib */,
+				CAB6A47F1BB44E44006D305C /* Supporting Files */,
+			);
+			path = GHLabelForTrade;
+			sourceTree = "<group>";
+		};
+		CAB6A47F1BB44E44006D305C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAB6A4801BB44E44006D305C /* Info.plist */,
+				CAB6A4811BB44E44006D305C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAB6A4981BB44E44006D305C /* GHLabelForTradeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAB6A49B1BB44E44006D305C /* GHLabelForTradeTests.m */,
+				CAB6A4991BB44E44006D305C /* Supporting Files */,
+			);
+			path = GHLabelForTradeTests;
+			sourceTree = "<group>";
+		};
+		CAB6A4991BB44E44006D305C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAB6A49A1BB44E44006D305C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAB6A47B1BB44E44006D305C /* GHLabelForTrade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAB6A49F1BB44E44006D305C /* Build configuration list for PBXNativeTarget "GHLabelForTrade" */;
+			buildPhases = (
+				CAB6A4781BB44E44006D305C /* Sources */,
+				CAB6A4791BB44E44006D305C /* Frameworks */,
+				CAB6A47A1BB44E44006D305C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHLabelForTrade;
+			productName = GHLabelForTrade;
+			productReference = CAB6A47C1BB44E44006D305C /* GHLabelForTrade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAB6A4941BB44E44006D305C /* GHLabelForTradeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAB6A4A21BB44E44006D305C /* Build configuration list for PBXNativeTarget "GHLabelForTradeTests" */;
+			buildPhases = (
+				CAB6A4911BB44E44006D305C /* Sources */,
+				CAB6A4921BB44E44006D305C /* Frameworks */,
+				CAB6A4931BB44E44006D305C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAB6A4971BB44E44006D305C /* PBXTargetDependency */,
+			);
+			name = GHLabelForTradeTests;
+			productName = GHLabelForTradeTests;
+			productReference = CAB6A4951BB44E44006D305C /* GHLabelForTradeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAB6A4741BB44E44006D305C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = WGH;
+				TargetAttributes = {
+					CAB6A47B1BB44E44006D305C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CAB6A4941BB44E44006D305C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CAB6A47B1BB44E44006D305C;
+					};
+				};
+			};
+			buildConfigurationList = CAB6A4771BB44E44006D305C /* Build configuration list for PBXProject "GHLabelForTrade" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAB6A4731BB44E44006D305C;
+			productRefGroup = CAB6A47D1BB44E44006D305C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAB6A47B1BB44E44006D305C /* GHLabelForTrade */,
+				CAB6A4941BB44E44006D305C /* GHLabelForTradeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAB6A47A1BB44E44006D305C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB6A48B1BB44E44006D305C /* Main.storyboard in Resources */,
+				CAB6A4901BB44E44006D305C /* LaunchScreen.xib in Resources */,
+				CAB6A48D1BB44E44006D305C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB6A4931BB44E44006D305C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAB6A4781BB44E44006D305C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB6A4A71BB44EA3006D305C /* GHLabelForTrade.m in Sources */,
+				CAB6A4881BB44E44006D305C /* ViewController.m in Sources */,
+				CAB6A4851BB44E44006D305C /* AppDelegate.m in Sources */,
+				CAB6A4821BB44E44006D305C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB6A4911BB44E44006D305C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB6A49C1BB44E44006D305C /* GHLabelForTradeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAB6A4971BB44E44006D305C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB6A47B1BB44E44006D305C /* GHLabelForTrade */;
+			targetProxy = CAB6A4961BB44E44006D305C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAB6A4891BB44E44006D305C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB6A48A1BB44E44006D305C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAB6A48E1BB44E44006D305C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB6A48F1BB44E44006D305C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAB6A49D1BB44E44006D305C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CAB6A49E1BB44E44006D305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAB6A4A01BB44E44006D305C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GHLabelForTrade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CAB6A4A11BB44E44006D305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GHLabelForTrade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CAB6A4A31BB44E44006D305C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GHLabelForTradeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHLabelForTrade.app/GHLabelForTrade";
+			};
+			name = Debug;
+		};
+		CAB6A4A41BB44E44006D305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GHLabelForTradeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHLabelForTrade.app/GHLabelForTrade";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAB6A4771BB44E44006D305C /* Build configuration list for PBXProject "GHLabelForTrade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB6A49D1BB44E44006D305C /* Debug */,
+				CAB6A49E1BB44E44006D305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAB6A49F1BB44E44006D305C /* Build configuration list for PBXNativeTarget "GHLabelForTrade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB6A4A01BB44E44006D305C /* Debug */,
+				CAB6A4A11BB44E44006D305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAB6A4A21BB44E44006D305C /* Build configuration list for PBXNativeTarget "GHLabelForTradeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB6A4A31BB44E44006D305C /* Debug */,
+				CAB6A4A41BB44E44006D305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAB6A4741BB44E44006D305C /* Project object */;
+}
