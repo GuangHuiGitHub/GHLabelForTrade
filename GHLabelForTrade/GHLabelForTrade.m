@@ -64,7 +64,7 @@
 //    self.tempLabel.font = [UIFont systemFontOfSize:fontNum];
     
     // 验证中文
-    NSMutableString *noEnglishChar = [NSMutableString string];
+//    NSMutableString *noEnglishChar = [NSMutableString string];
     for (int i = 0; i<[contentText length]; i++) {
         //截取字符串中的每一个字符
         NSString *s = [contentText substringWithRange:NSMakeRange(i, 1)];
@@ -211,7 +211,7 @@
         [linesArray addObject:lineString];
     }
     NSMutableArray *lastArrayM = [NSMutableArray arrayWithArray:linesArray];
-    if (self.isContentChar) {
+    if (self.isContentChar && [[lastArrayM lastObject] length] < 2) {
         [lastArrayM removeLastObject];
     }
     return (NSArray *)lastArrayM;
