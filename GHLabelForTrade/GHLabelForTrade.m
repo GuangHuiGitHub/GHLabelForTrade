@@ -10,20 +10,21 @@
  来自：GH，王光辉
  QQ：595000359
  email：ghhoping@163.com
-*/
+ */
 #import "GHLabelForTrade.h"
 #import <CoreText/CoreText.h>
 @interface GHLabelForTrade()
 @property (nonatomic, strong) UILabel *oneLineLabel;
 @property (nonatomic, strong) UILabel *tipsLabel;
 @property (nonatomic, assign) BOOL isContentChar;
+@property (nonatomic, assign) NSInteger textFontNum;
 @end
 @implementation GHLabelForTrade
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
         self.oneLineLabel = [self creatLabel];
-
+        
         
         UILabel *tipsLabel = [[UILabel alloc] init];
         self.tipsLabel = tipsLabel;
@@ -31,7 +32,7 @@
         tipsLabel.textAlignment = NSTextAlignmentCenter;
         tipsLabel.textColor = [UIColor whiteColor];
         [self.oneLineLabel addSubview:tipsLabel];
-         self.isContentChar = NO;
+        self.isContentChar = NO;
     }
     return self;
 }
@@ -47,6 +48,7 @@
 }
 - (void)setText:(NSString *)contentText withFont:(NSInteger)fontNum needMaxLines:(NSInteger)maxLine andTipsText:(NSString *)tipsText withTipsTextBgcolor:(UIColor *)TipsTextBgcolor;
 {
+    self.textFontNum = fontNum;
     self.tipsLabel.text = tipsText;
     self.tipsLabel.backgroundColor = TipsTextBgcolor;
     // 计算tipsText
@@ -58,13 +60,6 @@
     self.oneLineLabel.frame = CGRectMake(0, 0, textSize.width, textSize.height);
     self.oneLineLabel.text = contentText;
     self.oneLineLabel.font = [UIFont systemFontOfSize:fontNum];
-    
-//    self.tempLabel.frame = CGRectMake(0, 0, textSize.width, textSize.height);
-//    self.tempLabel.text = contentText;
-//    self.tempLabel.font = [UIFont systemFontOfSize:fontNum];
-    
-    // 验证中文
-//    NSMutableString *noEnglishChar = [NSMutableString string];
     for (int i = 0; i<[contentText length]; i++) {
         //截取字符串中的每一个字符
         NSString *s = [contentText substringWithRange:NSMakeRange(i, 1)];
@@ -84,19 +79,19 @@
         }];
         // 取出最后一个字符串
         NSString *lastLineText = [textArrayM lastObject];
-            // 说明相加大于一行 - 必须的
-             NSString *lastTureText = [lastLineText substringToIndex:lastLineText.length - tipsText.length - 2];
-            lastTureText = [NSString stringWithFormat:@"%@...",lastTureText];
+        // 说明相加大于一行 - 必须的
+        NSString *lastTureText = [lastLineText substringToIndex:lastLineText.length - tipsText.length - 2];
+        lastTureText = [NSString stringWithFormat:@"%@...",lastTureText];
         CGSize lastLineTureSize = [self sizeWithText:lastTureText Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
-            for (int i = 0; i < textArrayM.count - 1; ++i) {
-                [lastValueStrM appendString:textArrayM[i]];
-            }
-            [lastValueStrM appendString:lastTureText];
-            CGSize lastAllTureSize = [self sizeWithText:lastValueStrM Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width, MAXFLOAT)];
-            self.oneLineLabel.text = lastValueStrM;
-            self.oneLineLabel.frame = CGRectMake(0, 0, lastAllTureSize.width, lastAllTureSize.height);
-            self.tipsLabel.frame = CGRectMake(lastLineTureSize.width + 2, lastAllTureSize.height - tipsTextSize.height - 1, tipsTextSize.width+1, tipsTextSize.height+1);
-            self.tipsLabel.font = [UIFont systemFontOfSize:fontNum-3];
+        for (int i = 0; i < textArrayM.count - 1; ++i) {
+            [lastValueStrM appendString:textArrayM[i]];
+        }
+        [lastValueStrM appendString:lastTureText];
+        CGSize lastAllTureSize = [self sizeWithText:lastValueStrM Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width, MAXFLOAT)];
+        self.oneLineLabel.text = lastValueStrM;
+        self.oneLineLabel.frame = CGRectMake(0, 0, lastAllTureSize.width, lastAllTureSize.height);
+        self.tipsLabel.frame = CGRectMake(lastLineTureSize.width + 2, lastAllTureSize.height - tipsTextSize.height - 1, tipsTextSize.width+1, tipsTextSize.height+1);
+        self.tipsLabel.font = [UIFont systemFontOfSize:fontNum-3];
     }
     else if (textArray.count == maxLine)
     {
@@ -121,7 +116,7 @@
         }else
         {
             // 说明小于等于情况
-             NSString *lastLineText = [textArray lastObject];
+            NSString *lastLineText = [textArray lastObject];
             CGSize lastLineSize = [self sizeWithText:lastLineText Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
             self.oneLineLabel.text = contentText;
             self.oneLineLabel.frame = CGRectMake(0, 0, textSize.width, textSize.height);
@@ -166,17 +161,17 @@
                 self.oneLineLabel.frame = CGRectMake(0, 0, lastAllTureSize.width, lastAllTureSize.height);
                 self.tipsLabel.frame = CGRectMake(0, lastAllTureSize.height-tipsTextSize.height-1, tipsTextSize.width+1, tipsTextSize.height+1);
                 self.tipsLabel.font = [UIFont systemFontOfSize:fontNum-3];           }else
-            {
-                // 最后一行正好
-                NSString *lastLineText = [textArray lastObject];
-                CGSize lastLineSize = [self sizeWithText:lastLineText Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
-                // 一行搞定
-                self.oneLineLabel.text = contentText;
-                self.oneLineLabel.frame = CGRectMake(0, 0, textSize.width+tipsTextSize.width, textSize.height);
-                self.tipsLabel.frame = CGRectMake(lastLineSize.width+1, textSize.height-tipsTextSize.height-1, tipsTextSize.width+1, tipsTextSize.height+1);
-                self.tipsLabel.font = [UIFont systemFontOfSize:fontNum-3];
-                
-            }
+                {
+                    // 最后一行正好
+                    NSString *lastLineText = [textArray lastObject];
+                    CGSize lastLineSize = [self sizeWithText:lastLineText Font:[UIFont systemFontOfSize:fontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
+                    // 一行搞定
+                    self.oneLineLabel.text = contentText;
+                    self.oneLineLabel.frame = CGRectMake(0, 0, textSize.width+tipsTextSize.width, textSize.height);
+                    self.tipsLabel.frame = CGRectMake(lastLineSize.width+1, textSize.height-tipsTextSize.height-1, tipsTextSize.width+1, tipsTextSize.height+1);
+                    self.tipsLabel.font = [UIFont systemFontOfSize:fontNum-3];
+                    
+                }
             
         }
         
@@ -211,7 +206,17 @@
         [linesArray addObject:lineString];
     }
     NSMutableArray *lastArrayM = [NSMutableArray arrayWithArray:linesArray];
-    if (self.isContentChar && [[lastArrayM lastObject] length] < 2) {
+    int temp = 1;
+    if (lastArrayM.count>1) {
+        NSString *tempStr = [lastArrayM objectAtIndex:lastArrayM.count - 2];
+        CGSize lastLineSize = [self sizeWithText:tempStr Font:[UIFont systemFontOfSize:self.textFontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
+        CGSize oneWordSize = [self sizeWithText:@"光" Font:[UIFont systemFontOfSize:self.textFontNum] MaxSize:CGSizeMake(self.frame.size.width + 1, self.frame.size.height + 1)];
+        NSLog(@"self.frame-----%@",NSStringFromCGRect(self.frame));
+        if (lastLineSize.width+oneWordSize.width > self.frame.size.width) {
+            temp = 0;
+        }
+    }
+    if (self.isContentChar && [[lastArrayM lastObject] length] < 2 && lastArrayM.count > 1 && temp) {
         [lastArrayM removeLastObject];
     }
     return (NSArray *)lastArrayM;
